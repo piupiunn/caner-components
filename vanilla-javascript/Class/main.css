@@ -1,0 +1,87 @@
+.generator-table,
+.grid-maker {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+section {
+  display: block;
+}
+
+table {
+  margin: 20px auto;
+
+  background-color: #13007b;
+  border: none;
+  border-radius: 5px;
+}
+
+tr {
+  background-color: #fff8e5;
+}
+
+th {
+  margin: 5px;
+  padding: 15px;
+  color: #73a4ac;
+  background-color: #548ec1;
+}
+
+td {
+  padding: 15px;
+  text-align: center;
+}
+
+input {
+  width: 70px;
+  padding: 5px;
+  margin: 10px;
+  font-size: 16px;
+  background: #001450;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.checkbox {
+  width: 13px;
+  margin-right: 0px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 9px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #49bc37;
+  color: #fffdfd;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.1s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+/*Grid Maker*/
+
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#container {
+  display: grid;
+  gap: 1em;
+  margin-top: 20px;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+  padding: 1em;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: #fff8e5;
+  border: 2px solid rgb(19, 0, 123);
+}

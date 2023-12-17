@@ -1,0 +1,347 @@
+.app {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.comment {
+  border: 1px solid #ccc;
+  padding: 10px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.comment-content {
+  margin-bottom: 5px;
+}
+
+.toggle-button {
+  font-size: 14px;
+  padding: 5px;
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nested-replies {
+  margin-top: 10px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.reply-input {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.toggle-button {
+  font-size: 14px;
+  padding: 5px;
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nested-replies.visible {
+  margin-top: 10px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.nested-replies-line {
+  position: absolute;
+  width: 5px;
+  height: -webkit-fill-available;
+  background-color: black;
+  left: 29px;
+  cursor: pointer;
+  top: 37px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show-reply-input {
+  margin-left: 20px;
+}
+.comment-actions {
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+/* Carousel Slider */
+/* Carousel Slider */
+/* Carousel Slider */
+
+.carousel-slider {
+  position: relative; /* Carousel Slider'ın pozisyonunu belirler */
+  width: 50%; /* Carousel Slider'ın genişliğini yüzde olarak belirler */
+  height: 500px;
+  overflow: hidden; /* İçerik taşmalarında görünmeyen kısmını gizler */
+  margin: auto;
+}
+
+.carousel-wrapper {
+  display: flex; /* Slaytları yatay olarak yan yana dizmek için flex konteyneri oluşturur */
+  transition: transform ease-out 0.45s; /* Slaytlar arasında geçiş efekti sağlar */
+  height: 100%;
+}
+
+.carousel-slide {
+  flex: 100%; /* Slaytların başlangıç genişliğini yüzde olarak belirler */
+  flex-grow: 0; /* Slaytların genişlemesini engeller */
+  flex-shrink: 0; /* Slaytların daralmamasını engeller */
+  /* flex: 0 0 100%; */ /* Kısa bir şekilde yazılmış hali */
+  height: 100%;
+}
+
+.carousel-slide img {
+  width: 100%; /* Resimlerin genişliğini yüzde olarak belirler */
+  height: 100%; /* Resimlerin orantılı olarak yüksekliklerini ayarlar */
+  object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+  position: absolute; /* İleri/geri butonlarının Carousel Slider'a göre mutlak konumlandırılmasını sağlar */
+  top: 50%; /* Butonların dikey olarak ortalanmasını sağlar */
+  transform: translateY(-50%); /* Butonları dikey olarak ortalar */
+  background: transparent; /* Arkaplanı saydam yapar */
+  border: none; /* Kenarlık olmadığını belirtir */
+  color: white; /* Buton metni rengini belirler */
+  font-size: 24px; /* Buton metni font büyüklüğünü belirler */
+  cursor: pointer; /* İmleçin üzerine gelince el işareti şeklini almasını sağlar */
+}
+
+.prev-button {
+  left: 10px; /* Sol kenara göre konumlandırır */
+}
+
+.next-button {
+  right: 10px; /* Sağ kenara göre konumlandırır */
+}
+
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.slide-indicator {
+  margin: 0 5px;
+  cursor: pointer;
+  color: black;
+}
+
+.slide-indicator.active {
+  font-weight: bold;
+}
+
+/**/
+.notes-class {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+/**/
+/* styles.css */
+
+.cart-container {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  margin-bottom: 5px;
+}
+
+.clear-cart-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.product-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/**/
+/**/
+/* Slider container'ı için stil */
+
+/* Resimler için stil */
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Opaklık geçiş süresi */
+}
+
+/* Aktif resim için opaklık */
+.slider-img.active {
+  opacity: 1;
+}
+
+/**/
+.slider-container {
+  position: relative;
+  overflow: hidden; /* Kaydırma çubuğunu gizlemek için */
+  height: 500px;
+  width: 500px;
+}
+
+.slider-items {
+  display: flex; /* Slayt öğelerini yatayda yan yana sıralamak için */
+  scroll-snap-type: x mandatory; /* Yatay kaydırma için scroll snap ayarları. Slaytlar, yatayda hizalı bir şekilde kaydırılır. Bu, slaytların yatay eksende hizalı ve yan yana olmasını sağlar.
+  Kaydırma işlemi, slaytların tamamen görünür olduğu hedef slaytların pozisyonuna otomatik olarak hizalanır. Yani, kaydırma işlemi durduğunda slaytlar tam olarak görünecektir, yarıda kalmaz.
+  Kullanıcı, kaydırma işlemi sırasında slaytları "tutturabilir". Yani, kullanıcı kaydırmayı durdurduğunda en yakın slayt tam olarak hizalanır. */
+  scroll-behavior: smooth; /* Kaydırma işlemi animasyonlu olacak şekilde ayarlandı */
+  width: 100%; /* Kaydırma işlemi için genişlik ayarlandı */
+  overflow-x: hidden; /* Yatayda taşan içerikleri gizlemek için */
+}
+
+.slider-item {
+  scroll-snap-align: start;
+  flex: 0 0 100%; /* Her slaytın genişliği eşit olacak şekilde ayarlandı */
+  margin: 0 20px;
+  background-color: #f5f5f5; /* Arka plan rengini istediğiniz gibi ayarlayabilirsiniz. */
+  color: #333;
+  text-align: center;
+}
+
+.slider-button {
+  position: absolute; /* Düğmelerin üst üste olmasını sağlamak için */
+  top: 50%; /* Düğmeleri dikey olarak ortalamak için */
+  transform: translateY(-50%); /* Düğmeleri dikey olarak ortalamak için */
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  background-color: #ccc;
+  color: #333;
+  cursor: pointer;
+}
+
+.slider-button.prev {
+  left: 0; /* Sol tarafa yerleştirme */
+  border-radius: 50% 0 0 50%;
+}
+
+.slider-button.next {
+  right: 0; /* Sağ tarafa yerleştirme */
+  border-radius: 0 50% 50% 0;
+}
+/**/
+.juxtapose-container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.juxtapose-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.juxtapose-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.juxtapose-bar {
+  z-index: 100;
+  position: absolute;
+}
+
+/**/
+.second-juxtapose-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.second-juxtapose-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.second-juxtapose-bar {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: red;
+  cursor: ew-resize;
+}
+/**/
+body {
+  height: 2000px !important;
+}
+.section {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s, transform 1s;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section p {
+  margin-top: 50%;
+}
+/**/
+.dropZone {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropZone:hover {
+  background-color: #f8f8f8;
+}
+
+.dropZone.dragOver {
+  border: 1px dashed #000;
+  background-color: #e0e0e0;
+}
+
+#roundChartCanvas {
+  cursor: grab;
+}
+
+#roundChartCanvas:active {
+  cursor: grabbing;
+}
+/**/
+/**/
+/**/
+/**/
