@@ -1,6 +1,7 @@
 import React from "react";
 import RoundChart from "./RoundChart";
 import LineChart from "./LineChart";
+import ChartComponent from "./ChartComponent";
 
 function DashboardPage() {
   const handleDrop = (e) => {
@@ -87,6 +88,8 @@ function DashboardPage() {
         yAxisMax={1000}
         yAxisLabelInterval={100}
       />
+
+      <ChartComponent />
     </div>
   );
 }
